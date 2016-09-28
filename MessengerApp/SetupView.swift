@@ -93,6 +93,8 @@ class setupView : UIViewController {
                                                      "profileImageURL" : downloadURL!]
                 let childUpdates = ["Users/\(uid!)/" : user]
                 databaseRef.updateChildValues(childUpdates)
+                let vc = self.storyboard?.instantiateViewControllerWithIdentifier("Profiles")
+                self.presentViewController(vc!, animated: true, completion: nil)
             }
         }
         }
