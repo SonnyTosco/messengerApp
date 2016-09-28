@@ -70,4 +70,8 @@ class ProfileVC: UITableViewController {
         
         return cell!
     }
+    
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        currentChatUserID = users[indexPath.row].uid
+    }
 }
