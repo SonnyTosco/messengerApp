@@ -136,7 +136,7 @@
         <!--ProfileVC-->
         <scene sceneID="h4h-Gu-AZf">
             <objects>
-                <tableViewController storyboardIdentifier="Profiles" id="7eP-ES-IId" customClass="ProfileVC" customModule="MessengerApp" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="7eP-ES-IId" customClass="ProfileVC" customModule="MessengerApp" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="102" sectionHeaderHeight="28" sectionFooterHeight="28" id="SL8-Yu-CzD">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -193,7 +193,7 @@
         <!--Navigation Controller-->
         <scene sceneID="rtt-Wf-8W5">
             <objects>
-                <navigationController id="hoh-Cv-5oA" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="Profiles" id="hoh-Cv-5oA" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="UXG-PP-wvp">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -236,6 +236,9 @@
                                                     <constraint firstAttribute="height" constant="30" id="ktk-qV-mVd"/>
                                                 </constraints>
                                                 <state key="normal" title="Send"/>
+                                                <connections>
+                                                    <action selector="postSomething:" destination="A1d-nC-h9Y" eventType="touchUpInside" id="ZNH-Rt-DFX"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -269,7 +272,7 @@
                                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" tag="2" contentMode="scaleToFill" text="Hello" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="tcE-Wv-hrZ">
+                                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" tag="2" contentMode="scaleToFill" scrollEnabled="NO" text="Hello" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="tcE-Wv-hrZ">
                                                             <rect key="frame" x="8" y="37" width="584" height="63"/>
                                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -306,6 +309,7 @@
                     </view>
                     <connections>
                         <outlet property="tableView" destination="sxG-PV-prc" id="sDW-KB-pCd"/>
+                        <outlet property="textField" destination="ItB-PQ-h5E" id="zqc-Ww-ggp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="haO-IJ-4me" userLabel="First Responder" sceneMemberID="firstResponder"/>

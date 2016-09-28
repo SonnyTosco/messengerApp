@@ -11,6 +11,8 @@ import Firebase
 import FirebaseAuth
 import FirebaseDatabase
 
+var userName = String()
+
 class ViewController: UIViewController {
 
     @IBOutlet var EmailField: UITextField!
@@ -58,6 +60,8 @@ class ViewController: UIViewController {
                     let userDefaults = NSUserDefaults.standardUserDefaults()
                     userDefaults.setValue(self.EmailField.text!, forKey: "email")
                     userDefaults.setValue(self.PassField.text!, forKey: "password")
+                    
+                    userName = snapshot.value!["username"] as! String
                     
                     if snapshot.childrenCount == 0{
                         let vc = self.storyboard?.instantiateViewControllerWithIdentifier("Setup")
